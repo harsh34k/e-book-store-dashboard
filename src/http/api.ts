@@ -1,5 +1,6 @@
 import axios from 'axios';
 import useTokenStore from '@/store';
+import { ProfileFormValues } from '@/pages/EditDetails';
 
 const api = axios.create({
     // todo: move this value to env variable.
@@ -22,6 +23,12 @@ export const login = async (data: { email: string; password: string }) =>
 
 export const register = async (data: { name: string; email: string; password: string }) =>
     api.post('/api/users/register', data);
+
+export const updateDetails = async ({ email, oldPassword, newPassword }: ProfileFormValues) => {
+    console.log("updateDetils", { email, oldPassword, newPassword });
+
+    api.patch('/api/users/updateDetails', { email, oldPassword, newPassword });
+}
 
 export const getBooks = async () => api.get('/api/books');
 

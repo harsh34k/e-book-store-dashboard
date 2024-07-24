@@ -173,8 +173,7 @@ const DashboardLayout = () => {
                         <DropdownMenuContent align="end">
                             <DropdownMenuLabel>My Account</DropdownMenuLabel>
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem>Settings</DropdownMenuItem>
-                            <DropdownMenuItem>Support</DropdownMenuItem>
+                            <DropdownMenuItem ><Link to={"/dashboard/profile"}>Profile</Link></DropdownMenuItem>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem>
                                 <Button onClick={logout} variant={'link'}>

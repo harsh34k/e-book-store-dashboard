@@ -8,6 +8,7 @@ import AuthLayout from './layouts/AuthLayout';
 import CreateBook from './pages/CreateBook';
 import EditBook from './pages/EditBook';
 import SearchPage from './pages/SearchPage';
+import { EditDetails } from './pages/EditDetails';
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path: 'books/search',
                 element: <SearchPage />,
+            },
+            {
+                path: 'profile',
+                element: <EditDetails />,
             }
         ],
     },
