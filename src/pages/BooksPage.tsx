@@ -106,8 +106,6 @@ const BooksPage = () => {
                         </TableHeader>
                         <TableBody>
                             {data?.data.map((book: Book) => {
-                                console.log("book.author.name", book.author.name);
-
                                 return (
                                     <TableRow key={book._id}>
                                         <TableCell className="hidden sm:table-cell">

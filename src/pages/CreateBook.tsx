@@ -177,6 +177,7 @@ const CreateBook = () => {
                                             <FormControl>
                                                 <Input
                                                     type="file"
+                                                    accept="image/*"
                                                     className="w-full"
                                                     {...coverImageRef}
                                                 />
@@ -195,6 +196,7 @@ const CreateBook = () => {
                                             <FormControl>
                                                 <Input
                                                     type="file"
+                                                    accept='application/pdf'
                                                     className="w-full"
                                                     {...fileRef}
                                                 />
