@@ -44,7 +44,7 @@ const SearchPage = () => {
     const searchParams = new URLSearchParams(location.search);
     const searchQuery = searchParams.get("title");
 
-    const { data, isLoading, isError } = useQuery({
+    const { data, } = useQuery({
         queryKey: ['books', searchQuery],
         queryFn: () => getFilteredBooks(searchQuery),
         staleTime: 10000, // in Milli-seconds
